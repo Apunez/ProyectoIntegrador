@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aceros Arequipa · Análisis financiero 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#eef3fa;--sf:#fff;--ink:#0d1f3c;--mut:#566882;--ln:#d3deee;--ac:#0b4ea2;--ok:#1f8a4c;--wr:#d98200;--bd:#c62828;--hd:#08306b;--hdt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081426;--sf:#0f2240;--ink:#e8f0fc;--mut:#9db2d1;--ln:#1f3a63;--ac:#5aa0ff;--ok:#4cc27f;--wr:#f0aa3c;--bd:#ff7b72;--hd:#061a38;--hdt:#fff}}
+:root[data-theme="dark"]{--bg:#081426;--sf:#0f2240;--ink:#e8f0fc;--mut:#9db2d1;--ln:#1f3a63;--ac:#5aa0ff;--ok:#4cc27f;--wr:#f0aa3c;--bd:#ff7b72;--hd:#061a38;--hdt:#fff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Archivo,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+header{background:var(--hd);color:var(--hdt);padding:14px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{font-size:18px;margin:0;font-weight:700;font-stretch:90%;flex:1;min-width:200px}
+.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:#ffffff1f}.badge.on{background:var(--wr);color:#fff}
+button,input{font:inherit}button{cursor:pointer;border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:6px;padding:6px 12px}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+nav{display:flex;gap:2px;overflow-x:auto;background:var(--sf);border-bottom:1px solid var(--ln);padding:0 12px}
+nav button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none;padding:12px 14px;white-space:nowrap;color:var(--mut);font-weight:600}
+nav button[aria-selected=true]{color:var(--ink);border-color:var(--ac)}
+main{max-width:1180px;margin:0 auto;padding:22px 16px 60px}section{display:none}section.on{display:block}
+h2{font-size:30px;font-stretch:85%;font-weight:800;margin:0 0 4px;line-height:1.15}h3{font-size:18px;margin:26px 0 10px}
+.sub{color:var(--mut);margin:0 0 18px;max-width:70ch}
+.box{background:var(--sf);border:1px solid var(--ln);border-radius:8px;padding:16px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.k h4{margin:0;font-size:13px;color:var(--mut);font-weight:600}.k .v{font-size:28px;font-weight:700;font-stretch:90%;margin:2px 0}
+.k .s{font-size:13px;color:var(--mut)}.k p{margin:8px 0 4px;font-size:14px}.k small{color:var(--mut)}
+.chip{font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;vertical-align:middle;color:#fff;margin-left:6px}
+.c0{background:var(--ok)}.c1{background:var(--wr)}.c2{background:var(--bd)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:6px 10px;text-align:right;border-bottom:1px solid var(--ln);white-space:nowrap}th:first-child,td:first-child{text-align:left;white-space:normal}
+th{color:var(--mut);font-weight:600}tr.t td{font-weight:700;background:color-mix(in srgb,var(--ac) 8%,transparent)}tr.h td{font-weight:700;color:var(--ac);padding-top:14px}
+.read{border-left:4px solid var(--ac);background:var(--sf);padding:12px 16px;margin:14px 0;border-radius:0 8px 8px 0}.read p{margin:4px 0}
+.eq{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}.eq .box{flex:1;min-width:150px}.eq b.op{align-self:center;font-size:22px;color:var(--mut)}
+.cv{position:relative;height:270px}.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.sim{display:grid;gap:10px 18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}.sim label{font-size:13px;display:block;color:var(--mut)}
+.sim input[type=number]{width:100%;padding:5px 8px;border:1px solid var(--ln);border-radius:6px;background:var(--bg);color:var(--ink)}
+.sim input[type=range]{width:100%;accent-color:var(--ac)}details{margin:8px 0}summary{cursor:pointer;font-weight:700;padding:6px 0}
+.warn{color:var(--wr);font-weight:600}
+main::before{content:"";display:block;height:9px;border-radius:5px;margin-bottom:18px;background:repeating-linear-gradient(120deg,#0b4ea2 0 12px,#fff 12px 15px,#5aa0ff 15px 27px,#fff 27px 30px)}
+.k{border-left:5px solid var(--ac)}.hero{display:flex;gap:24px;align-items:center;justify-content:space-between;background:linear-gradient(110deg,#08306b,#0b4ea2);color:#fff;border-radius:10px;padding:24px 28px;flex-wrap:wrap}.hero h2{color:#fff}.hero p{max-width:56ch;opacity:.93;margin:6px 0 0}.hero svg{width:min(330px,100%)}
+.prod{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin:14px 0}.pr{background:var(--sf);border:1px solid var(--ln);border-top:5px solid var(--ac);border-radius:8px;padding:14px}.pr:nth-child(2){border-top-color:#f5a300}.pr:nth-child(3){border-top-color:#2a9d8f}.pr:nth-child(4){border-top-color:#e63946}.pr b{display:block}.pr span{color:var(--mut);font-size:13.5px}.ed summary{color:var(--ac)}.ed .s{color:var(--mut);font-size:13px;margin:0 0 8px}.ed{margin:0 0 14px}
+</style></head><body>
+<header><h1>Corporación Aceros Arequipa S.A. · Análisis financiero</h1><span id="bg" class="badge">Datos del archivo 2025</span><button id="rs">Restablecer datos</button></header>
+<nav role="tablist" id="nv"></nav>
+<main>
+<section id="nos"></section><section id="av"></section><section id="dp"></section><section id="ct"></section><section id="gs"></section><section id="sv"></section><section id="db"></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const BS=[['efe','Efectivo y equivalentes','AC'],['cxc','Cuentas por cobrar comerciales','AC'],['cxcr','CxC a entidades relacionadas','AC'],['ocxc','Otras cuentas por cobrar','AC'],['ant','Anticipos','AC'],['inv','Inventarios','AC'],['aig','Activos por impuestos a las ganancias','AC'],
+['oaf','Otros activos financieros','ANC'],['sub','Inversiones en subsidiarias y asociadas','ANC'],['cxcr2','CxC a entidades relacionadas (LP)','ANC'],['ocxc2','Otras cuentas por cobrar (LP)','ANC'],['pinv','Propiedades de inversión','ANC'],['ppe','Propiedades, planta y equipo','ANC'],['int','Activos intangibles','ANC'],['oanf','Otros activos no financieros','ANC'],
+['ofc','Otros pasivos financieros (CP)','PC'],['cxp','Cuentas por pagar comerciales','PC'],['cxpr','CxP a entidades relacionadas','PC'],['ocxp','Otras cuentas por pagar','PC'],['pig','Pasivos por impuestos a las ganancias','PC'],
+['ofl','Otros pasivos financieros (LP)','PNC'],['ocxpl','Otras cuentas por pagar (LP)','PNC'],['pid','Pasivos por impuestos diferidos','PNC'],
+['cap','Capital emitido','PAT'],['ai','Acciones de inversión','PAT'],['orc','Otras reservas de capital','PAT'],['ra','Resultados acumulados','PAT'],['orp','Otras reservas de patrimonio','PAT']];
+const PL=[['ing','Ingresos de actividades ordinarias'],['cv','Costo de ventas'],['gv','Gastos de ventas y distribución'],['ga','Gastos de administración'],['oio','Otros ingresos operativos'],['ogo','Otros gastos operativos'],['ifn','Ingresos financieros'],['gf','Gastos financieros'],['sb','Resultado de subsidiarias y asociadas'],['dc','Diferencias de cambio neto'],['imp','Impuesto a las ganancias']];
+const K=[...BS.map(b=>b[0]),...PL.map(p=>p[0])],LB=Object.fromEntries([...BS.map(b=>[b[0],b[1]]),...PL]);
+const D25=[609389,428345,137183,54410,7087,1092671,0,10930,301112,45525,29,16402,3032246,2290,33874,901900,512650,50041,172252,5681,871074,0,245659,890858,182408,179066,1574463,185441,4750922,4069959,144583,126840,21793,33898,28344,106879,65223,11850,100045];
+const D24=[464460,442125,174363,78164,8066,1193199,28558,22675,235298,12341,10509,18155,3085581,5400,34239,1184336,467040,35981,123310,0,941945,9202,230204,890858,182408,178927,1385475,183447,4369096,3742639,138828,105610,15129,17180,31556,119103,10368,1198,86758];
+const B25=Object.fromEntries(K.map((k,i)=>[k,D25[i]])),B24=Object.fromEntries(K.map((k,i)=>[k,D24[i]]));
+let S={...B25},PC=25;
+const sm=(v,g)=>BS.filter(b=>b[2]==g).reduce((s,b)=>s+v[b[0]],0);
+function C(v){const c={...v};c.AC=sm(v,'AC');c.ANC=sm(v,'ANC');c.TA=c.AC+c.ANC;c.PC=sm(v,'PC');c.PNC=sm(v,'PNC');c.TP=c.PC+c.PNC;c.PAT=sm(v,'PAT');c.TPP=c.TP+c.PAT;
+c.UB=v.ing-v.cv;c.UO=c.UB-v.gv-v.ga+v.oio-v.ogo;c.UAI=c.UO+v.ifn-v.gf+v.sb+v.dc;c.UN=c.UAI-v.imp;return c}
+function R(c,p,k){p=p||c;const a=(x,y)=>(x+y)/2,o={};
+o.mn=c.UN/c.ing;o.ra=c.ing/c.TA;o.ap=c.TA/c.PAT;o.roa=o.mn*o.ra;o.roe=o.roa*o.ap;o.mb=c.UB/c.ing;o.mo=c.UO/c.ing;
+o.ctn=c.AC-c.PC;o.ktno=c.cxc+c.inv-c.cxp;o.lc=c.AC/c.PC;o.pa=(c.AC-c.inv)/c.PC;o.la=c.efe/c.PC;
+o.rinv=c.cv/a(c.inv,p.inv);o.dio=360/o.rinv;o.rcxc=c.ing*k/a(c.cxc,p.cxc);o.dso=360/o.rcxc;o.rcxp=c.cv/a(c.cxp,p.cxp);o.dpo=360/o.rcxp;
+o.co=o.dio+o.dso;o.cce=o.co-o.dpo;o.rct=c.ing/o.ctn;o.rta=c.ing/a(c.TA,p.TA);o.rtf=c.ing/a(c.ANC,p.ANC);o.rtc=c.ing/a(c.AC,p.AC);
+o.sg=c.TA/c.TP;o.elp=c.PNC/c.PAT;o.et=c.TP/c.TA;o.apat=c.TP/c.PAT;o.cob=c.UO/c.gf;return o}
+let c25,c24,r25,r24;
+const L=(n,d=2)=>isFinite(n)?n.toLocaleString('es-PE',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+const nf=n=>isFinite(n)?Math.round(n).toLocaleString('es-PE'):'—',pc=(n,d=1)=>isFinite(n)?L(n*100,d)+' %':'—';
+const FM={x:n=>L(n),p:n=>pc(n),d:n=>isFinite(n)?nf(n)+' días':'—',v:n=>L(n)+' veces',m:n=>isFinite(n)?'S/ '+nf(n)+' mil':'—'};
+const ge=x=>v=>v>=x?0:v>=x*.75?1:2,le=x=>v=>v<=x?0:v<=x*1.3?1:2,rg=(a,b)=>v=>v>=a&&v<=b?0:(v>=a-.1&&v<=b+.1?1:2);
+const trend=(a,b,hb)=>{const d=a-b;if(!isFinite(d)||Math.abs(d)<=Math.abs(b)*.01)return'Se mantiene estable frente a 2024.';
+return`${d>0?'Sube':'Baja'} ${pc(Math.abs(d/b))} frente a 2024${hb==null?'.':(d>0==hb?', lectura favorable.':', lectura desfavorable.')}`};
+// [título, clave, formato, regla, evaluador, texto, mejor-si-sube]
+const CT=[['Capital de trabajo neto (CTNO)','ctn','m','Activo corriente − pasivo corriente',null,(a,b,c)=>a>=0?`El activo corriente supera al pasivo corriente en ${FM.m(a)}: hay colchón para el corto plazo.`:`El pasivo corriente supera al activo corriente en ${FM.m(-a)}: presión de liquidez.`,1],
+['Capital de trabajo operativo (KTNO)','ktno','m','CxC comerciales + inventarios − CxP comerciales',null,(a,b,c)=>`Las operaciones inmovilizan ${pc(a/c.ing)} de las ventas anuales; ${a<=r25.ctn?'el CTNO alcanza para financiarlo.':'el CTNO no alcanza para financiarlo.'}`,0]];
+const LQ=[['Liquidez corriente','lc','x','Referencia ≥ 1,5',ge(1.5),a=>`Cada S/ 1 de deuda de corto plazo está respaldado por S/ ${L(a)} de activo corriente.`,1],
+['Prueba ácida','pa','x','Referencia ≥ 1,0',ge(1),a=>`Sin contar inventarios, cada S/ 1 de deuda corriente tiene S/ ${L(a)} de respaldo líquido.`,1],
+['Liquidez absoluta','la','x','Referencia ≥ 0,2 (efectivo / pasivo corriente)',ge(.2),a=>`El efectivo cubre ${pc(a)} del pasivo corriente.`,1]];
+const GS=[['Rotación de inventarios','rinv','v','Costo de ventas / inventario promedio',null,a=>`El inventario se renueva ${L(a)} veces al año.`,1],
+['DIO · días de inventario','dio','d','360 / rotación de inventarios',null,a=>`El inventario permanece ${nf(a)} días antes de venderse.`,0],
+['Rotación de cuentas por cobrar','rcxc','v','Ventas a crédito / CxC promedio',null,a=>`Las cuentas por cobrar se cobran ${L(a)} veces al año.`,1],
+['DSO · días de cobro','dso','d','360 / rotación de CxC',null,a=>`La empresa tarda ${nf(a)} días en cobrar sus ventas a crédito.`,0],
+['Rotación de cuentas por pagar','rcxp','v','Compras (costo de ventas) / CxP promedio',null,a=>`Las cuentas por pagar se pagan ${L(a)} veces al año.`,0],
+['DPO · días de pago','dpo','d','360 / rotación de CxP',null,a=>`Se paga a proveedores en ${nf(a)} días: financiamiento sin costo explícito.`,1],
+['Rotación de capital de trabajo','rct','v','Ventas / capital de trabajo',null,a=>isFinite(a)&&a>0?`Cada S/ 1 de capital de trabajo genera S/ ${L(a)} de ventas.`:'El capital de trabajo es nulo o negativo: la rotación no es interpretable.',1],
+['Rotación de activos totales','rta','v','Ventas / activo total promedio · referencia > 0,5',ge(.5),a=>`Cada S/ 1 invertido en activos retorna S/ ${L(a)} en ventas.`,1],
+['Rotación de activos fijos','rtf','v','Ventas / activo no corriente promedio · referencia > 0,5',ge(.5),a=>`Cada S/ 1 en activos no corrientes genera S/ ${L(a)} de ventas.`,1],
+['Rotación de activos corrientes','rtc','v','Ventas / activo corriente promedio',null,a=>`Cada S/ 1 de activo corriente genera S/ ${L(a)} de ventas.`,1]];
+const SV=[['Solvencia general','sg','x','Activo total / pasivo total · referencia > 1,5',ge(1.5),a=>`Los activos equivalen a ${L(a)} veces las deudas totales.`,1],
+['Endeudamiento a largo plazo','elp','x','Pasivo no corriente / patrimonio · referencia < 0,5',le(.5),a=>`La deuda de largo plazo equivale a ${pc(a)} del patrimonio.`,0],
+['Endeudamiento total','et','p','Pasivo total / activo total · rango 40 %–60 %',rg(.4,.6),a=>`${pc(a)} de los activos se financia con terceros.`,0],
+['Apalancamiento patrimonial','apat','x','Pasivo total / patrimonio · referencia ≤ 1',le(1),a=>`Por cada S/ 1 de patrimonio hay S/ ${L(a)} de deuda.`,0],
+['Cobertura de intereses','cob','x','Utilidad operativa / gastos financieros · referencia ≥ 3',ge(3),a=>`La utilidad operativa cubre ${L(a)} veces los gastos financieros.`,1]];
+const CHIP=['Cumple','Atención','Riesgo'];
+function cards(list){return'<div class="grid">'+list.map(([t,k,f,rule,ev,say,hb])=>{const a=r25[k],b=r24[k],e=ev?ev(a):-1;
+return`<article class="box k"><h4>${t}</h4><div class="v">${FM[f](a)}${e>=0?`<span class="chip c${e}">${CHIP[e]}</span>`:''}</div><div class="s">2024: ${FM[f](b)}</div><p>${say(a,b,c25)} ${trend(a,b,hb)}</p><small>${rule}</small></article>`}).join('')+'</div>'}
+function rowsBS(){const r=[],G={AC:'Activos corrientes',ANC:'Activos no corrientes',PC:'Pasivos corrientes',PNC:'Pasivos no corrientes',PAT:'Patrimonio'},T={AC:'Total activos corrientes',ANC:'Total activos no corrientes',PC:'Total pasivos corrientes',PNC:'Total pasivos no corrientes',PAT:'Total patrimonio'};
+['AC','ANC','PC','PNC','PAT'].forEach(g=>{r.push([G[g],null,2]);BS.filter(b=>b[2]==g).forEach(b=>r.push([b[1],b[0],0]));r.push([T[g],g,1]);if(g=='ANC')r.push(['TOTAL ACTIVOS','TA',1]);if(g=='PNC')r.push(['Total pasivos','TP',1]);if(g=='PAT')r.push(['TOTAL PASIVO Y PATRIMONIO','TPP',1])});return r}
+const rowsPL=[['Ingresos de actividades ordinarias','ing',1],['Costo de ventas','cv',0],['Ganancia bruta','UB',1],['Gastos de ventas y distribución','gv',0],['Gastos de administración','ga',0],['Otros ingresos operativos','oio',0],['Otros gastos operativos','ogo',0],['Ganancia operativa','UO',1],['Ingresos financieros','ifn',0],['Gastos financieros','gf',0],['Resultado de subsidiarias y asociadas','sb',0],['Diferencias de cambio neto','dc',0],['Ganancia antes de impuestos','UAI',1],['Impuesto a las ganancias','imp',0],['Ganancia neta del ejercicio','UN',1]];
+function tbl(rows,base,title){return`<div class="box tw"><table><thead><tr><th>${title}</th><th>2025</th><th>% vertical</th><th>2024</th><th>% vertical</th><th>Var. absoluta</th><th>Var. relativa</th></tr></thead><tbody>`+rows.map(([l,k,t])=>{
+if(t==2)return`<tr class="h"><td colspan="7">${l}</td></tr>`;const a=c25[k],b=c24[k],d=a-b;
+return`<tr class="${t?'t':''}"><td>${l}</td><td>${nf(a)}</td><td>${pc(a/c25[base])}</td><td>${nf(b)}</td><td>${pc(b/c24[base])}</td><td>${nf(d)}</td><td>${pc(d/Math.abs(b))}</td></tr>`}).join('')+'</tbody></table></div>'}
+function movers(){const x=K.filter(k=>!['ing'].includes(k)).map(k=>[k,c25[k]-c24[k]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).slice(0,3);
+return x.map(([k,d])=>`${LB[k]} (${d>0?'+':'−'}S/ ${nf(Math.abs(d))} mil)`).join('; ')}
+function effects(){const m=r25.mn-r24.mn,r=r25.ra-r24.ra,a=r25.ap-r24.ap;return[m*r24.ra*r24.ap,r25.mn*r*r24.ap,r25.mn*r25.ra*a]}
+function drv(){const e=effects(),n=['el margen neto','la rotación de activos','el apalancamiento'];const i=e.map(Math.abs).indexOf(Math.max(...e.map(Math.abs)));return`${n[i]} (${e[i]>=0?'+':'−'}${L(Math.abs(e[i])*100)} pp)`}
+function html(){
+const dA=c25.TA/c24.TA-1,dV=c25.ing/c24.ing-1,dU=c25.UN/c24.UN-1;
+$('#nos').innerHTML=`<div class="hero"><div><h2>Corporación Aceros Arequipa S.A.</h2><p>Fierro corrugado, alambrón, clavos y más: el acero que se vuelve casas, puentes y fábricas. Aquí leemos sus estados financieros individuales 2025 frente a 2024.</p></div><svg viewBox="0 0 320 130" aria-hidden="true"><defs><pattern id="rb" width="12" height="20" patternUnits="userSpaceOnUse" patternTransform="skewX(-35)"><rect width="4" height="20" fill="#08306b" opacity=".55"/></pattern></defs>${[10,38,66,94].map((y,i)=>`<rect x="${i*14}" y="${y}" width="${300-i*14}" height="18" rx="9" fill="#d6e6ff"/><rect x="${i*14}" y="${y}" width="${300-i*14}" height="18" rx="9" fill="url(#rb)"/>`).join('')}</svg></div><div class="prod"><div class="pr"><b>Fierro corrugado</b><span>Barras para columnas, vigas y losas.</span></div><div class="pr"><b>Alambrón</b><span>Base para trefilar alambres y mallas.</span></div><div class="pr"><b>Alambres y clavos</b><span>Encofrado, acabados y ferretería.</span></div><div class="pr"><b>Perfiles y barras lisas</b><span>Estructuras y metalmecánica.</span></div></div>
+<div class="two"><div class="box"><h3 style="margin-top:0">Sobre la empresa</h3><p>Aceros Arequipa es uno de los principales productores de acero del Perú. Su portafolio se orienta a barras de construcción, alambrones y otros productos largos, con operación industrial en Pisco (Ica) y presencia comercial en todo el país.</p><p class="s" style="color:var(--mut)">Descripción general de información pública; para detalle societario consulta su memoria anual.</p></div>
+<div class="box"><h3 style="margin-top:0">Datos del reporte cargado</h3><table><tr><td>Empresa</td><td>CORPORACION ACEROS AREQUIPA S.A.</td></tr><tr><td>Tipo de estados</td><td>Individual</td></tr><tr><td>Año y periodo</td><td>2025 · Anual</td></tr><tr><td>Firmante</td><td>Luis Ricardo Guzmán Valenzuela, representante legal</td></tr><tr><td>Fecha de firma</td><td>23 mar. 2026</td></tr><tr><td>Unidad</td><td>Miles de soles (S/ mil), como en el archivo</td></tr></table></div></div>
+<h3>Cómo usar la aplicación</h3><div class="box"><p>Las secciones de análisis leen los montos del archivo. En <b>Dashboard y simulador</b> puedes modificar cualquier cuenta 2025: todas las tablas, ratios, interpretaciones y gráficos se recalculan al instante. El botón «Restablecer datos» vuelve a los montos originales.</p><p>Notas de método: los promedios usan 2025 y 2024; como el archivo no trae 2023, los promedios de 2024 equivalen al saldo de cierre de 2024. DSO usa solo ventas a crédito (25 % por defecto, ajustable en el simulador) y las compras se aproximan con el costo de ventas.</p></div>`;
+$('#av .out').innerHTML=`<h2>Análisis vertical y horizontal</h2><p class="sub">Vertical: peso de cada cuenta sobre el total de activos (situación financiera) o sobre las ventas (resultados). Horizontal: variación 2025 vs 2024.</p>
+<div class="read"><p><b>Lectura automática.</b> El activo total ${dA>=0?'crece':'cae'} ${pc(Math.abs(dA))} y las ventas ${dV>=0?'crecen':'caen'} ${pc(Math.abs(dV))}. La utilidad neta ${dU>=0?'sube':'baja'} ${pc(Math.abs(dU))} hasta S/ ${nf(c25.UN)} mil, es decir ${pc(c25.UN/c25.ing)} de las ventas.</p><p>El activo corriente pesa ${pc(c25.AC/c25.TA)} del total y el patrimonio financia ${pc(c25.PAT/c25.TPP)} de los activos. Mayores movimientos absolutos: ${movers()}.</p></div>
+<h3>Estado de situación financiera</h3>${tbl(rowsBS(),'TA','Cuenta (S/ mil)')}<h3>Estado de resultados</h3>${tbl(rowsPL,'ing','Cuenta (S/ mil)')}`;
+const e=effects(),R4=[['Margen neto','mn','p'],['Rotación de activos','ra','v'],['Apalancamiento (activo / patrimonio)','ap','x']];
+const box=(t,k,f)=>`<div class="box k"><h4>${t}</h4><div class="v">${FM[f](r25[k])}</div><div class="s">2024: ${FM[f](r24[k])}</div></div>`;
+$('#dp .out').innerHTML=`<h2>Análisis DuPont</h2><p class="sub">ROE = margen neto × rotación de activos × apalancamiento, con saldos de cierre.</p>
+<div class="eq">${box(...R4[0])}<b class="op">×</b>${box(...R4[1])}<b class="op">×</b>${box(...R4[2])}<b class="op">=</b><div class="box k"><h4>ROE (rentabilidad sobre patrimonio)</h4><div class="v">${pc(r25.roe,2)}</div><div class="s">2024: ${pc(r24.roe,2)}</div></div></div>
+<div class="grid" style="margin-top:12px"><div class="box k"><h4>ROA = margen neto × rotación</h4><div class="v">${pc(r25.roa,2)}</div><div class="s">2024: ${pc(r24.roa,2)}</div></div>
+<div class="box k"><h4>Utilidad neta / ventas</h4><div class="v">S/ ${L(r25.mn)}</div><div class="s">de ganancia por cada S/ 1 vendido (2024: S/ ${L(r24.mn)})</div></div>
+<div class="box k"><h4>Ventas / activo total</h4><div class="v">S/ ${L(r25.ra)}</div><div class="s">de venta por cada S/ 1 de activo (2024: S/ ${L(r24.ra)})</div></div></div>
+<div class="read"><p><b>Lectura automática.</b> El ROE ${r25.roe>=r24.roe?'sube':'baja'} de ${pc(r24.roe,2)} a ${pc(r25.roe,2)} (${r25.roe>=r24.roe?'+':'−'}${L(Math.abs(r25.roe-r24.roe)*100)} pp). El principal impulsor es ${drv()}. ${r25.ap<r24.ap?'El apalancamiento baja: la mejora de rentabilidad proviene de operar mejor, con menos dependencia de la deuda.':'El apalancamiento sube: parte del ROE depende de más deuda, lo que eleva el riesgo.'}</p></div>
+<h3>Aporte de cada factor a la variación del ROE (puntos porcentuales)</h3><div class="box"><div class="cv"><canvas id="ch2"></canvas></div></div>`;
+$('#ct .out').innerHTML=`<h2>Capital de trabajo y liquidez</h2><p class="sub">Cuánto respaldo corriente tiene la empresa y cuánto capital absorbe su operación.</p>
+<div class="box tw"><table><thead><tr><th>S/ mil</th><th>2025</th><th>2024</th></tr></thead><tbody><tr><td>Activo corriente</td><td>${nf(c25.AC)}</td><td>${nf(c24.AC)}</td></tr><tr><td>(−) Pasivo corriente</td><td>${nf(c25.PC)}</td><td>${nf(c24.PC)}</td></tr><tr class="t"><td>Capital de trabajo neto (CTNO)</td><td>${nf(r25.ctn)}</td><td>${nf(r24.ctn)}</td></tr>
+<tr><td>Cuentas por cobrar comerciales</td><td>${nf(c25.cxc)}</td><td>${nf(c24.cxc)}</td></tr><tr><td>(+) Inventarios</td><td>${nf(c25.inv)}</td><td>${nf(c24.inv)}</td></tr><tr><td>(−) Cuentas por pagar comerciales</td><td>${nf(c25.cxp)}</td><td>${nf(c24.cxp)}</td></tr><tr class="t"><td>Capital de trabajo operativo (KTNO)</td><td>${nf(r25.ktno)}</td><td>${nf(r24.ktno)}</td></tr></tbody></table></div>
+<h3>Capital de trabajo</h3>${cards(CT)}<h3>Ratios de liquidez</h3>${cards(LQ)}<div class="read"><p><b>Lectura automática.</b> ${r25.ctn>=0?`El CTNO es positivo (S/ ${nf(r25.ctn)} mil): el corto plazo está cubierto.`:`El CTNO es negativo (S/ ${nf(r25.ctn)} mil): hay más deuda corriente que activo corriente.`} Los inventarios pesan ${pc(c25.inv/c25.AC)} del activo corriente y la prueba ácida es ${L(r25.pa)}: ${r25.pa>=1?'se podría pagar el corto plazo sin vender el stock de fierro y alambrón.':'depende de vender inventario para cubrir deudas corrientes.'} El KTNO ${r25.ktno>r24.ktno?'aumenta':'disminuye'} ${pc(Math.abs(r25.ktno/r24.ktno-1))} frente a 2024.</p></div>`;
+const dif=(k,hb)=>{const ok=(r25[k]<r24[k])==!hb;return ok?'<span class="chip c0">Cumple objetivo</span>':'<span class="chip c2">No cumple</span>'};
+$('#gs .out').innerHTML=`<h2>Ratios de gestión</h2><p class="sub">Muestran si la operación genera o consume caja: cuánto tiempo permanecen en almacén las varillas, el alambrón y los clavos, en cuánto se cobra a los clientes y en cuánto se paga a los proveedores.</p>
+<h3 style="margin-top:0">Triángulo operativo y rotaciones</h3>${cards(GS)}
+<h3>Ciclo de conversión de efectivo</h3><div class="eq"><div class="box k"><h4>Ciclo operativo (DIO + DSO)</h4><div class="v">${FM.d(r25.co)}</div><div class="s">2024: ${FM.d(r24.co)}</div></div><b class="op">−</b><div class="box k"><h4>DPO</h4><div class="v">${FM.d(r25.dpo)}</div><div class="s">2024: ${FM.d(r24.dpo)}</div></div><b class="op">=</b><div class="box k"><h4>Ciclo de conversión de efectivo</h4><div class="v">${FM.d(r25.cce)}</div><div class="s">2024: ${FM.d(r24.cce)}</div></div></div>
+<div class="read"><p>${r25.cce>0?`Cada sol invertido en la operación tarda ${nf(r25.cce)} días en volver a caja; ese lapso necesita financiamiento.`:'El ciclo es negativo: los proveedores financian toda la operación y la caja entra antes de pagarles.'} ${r25.cce<r24.cce?'El ciclo se acorta frente a 2024, la caja retorna más rápido.':'El ciclo se alarga frente a 2024, la caja retorna más lento.'}</p></div>
+<h3>Matriz de engranaje (comparado con 2024)</h3><div class="box tw"><table><thead><tr><th>Indicador</th><th>2025</th><th>2024</th><th>Objetivo</th><th>Resultado</th></tr></thead><tbody><tr><td>DIO</td><td>${FM.d(r25.dio)}</td><td>${FM.d(r24.dio)}</td><td>Menor es mejor</td><td>${dif('dio',0)}</td></tr><tr><td>DSO</td><td>${FM.d(r25.dso)}</td><td>${FM.d(r24.dso)}</td><td>Menor es mejor</td><td>${dif('dso',0)}</td></tr><tr><td>DPO</td><td>${FM.d(r25.dpo)}</td><td>${FM.d(r24.dpo)}</td><td>Mayor es mejor</td><td>${dif('dpo',1)}</td></tr></tbody></table></div>`;
+$('#sv .out').innerHTML=`<h2>Ratios de solvencia</h2><p class="sub">Capacidad de sostener las deudas y qué tan dependiente es la empresa de financiamiento externo.</p>${cards(SV)}
+<div class="read"><p><b>Lectura automática.</b> ${r25.et<=.6&&r25.et>=.4?'La estructura de capital está en el rango equilibrado.':r25.et<.4?'La empresa se financia sobre todo con patrimonio.':'La deuda domina la estructura de capital.'} ${r25.cob>=3?'Los intereses se cubren con holgura.':'La cobertura de intereses es ajustada.'}</p></div>`}
+const MS=['AC','ANC','PC','PNC','PAT'],ML=['Act. corriente','Act. no corriente','Pas. corriente','Pas. no corriente','Patrimonio'];
+function ch(id,type,data,opt={}){if(window.CH&&CH[id])CH[id].destroy();window.CH=window.CH||{};Chart.defaults.color=getComputedStyle(document.documentElement).getPropertyValue('--mut').trim();Chart.defaults.font.family='Archivo,system-ui,sans-serif';
+CH[id]=new Chart($('#'+id),{type,data,options:{animation:false,responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},...opt}})}
+function charts(){const e=effects(),v=[r24.roe,...e,r25.roe].map(x=>x*100);
+ch('ch2','bar',{labels:['ROE 2024','Margen neto','Rotación','Apalancamiento','ROE 2025'],datasets:[{data:v,backgroundColor:v.map((x,i)=>i%4==0?'#5f7d93':x>=0?'#1f8a4c':'#c0392b')}]},{plugins:{legend:{display:false}}});
+if(!$('#c1'))return;
+ch('c1','bar',{labels:ML,datasets:[{label:'2024',data:MS.map(k=>c24[k]),backgroundColor:'#8aa0b3'},{label:'2025',data:MS.map(k=>c25[k]),backgroundColor:'#0f7c8f'}]});
+ch('c2','bar',{labels:['Margen bruto','Margen operativo','Margen neto'],datasets:[{label:'2024',data:['mb','mo','mn'].map(k=>r24[k]*100),backgroundColor:'#8aa0b3'},{label:'2025',data:['mb','mo','mn'].map(k=>r25[k]*100),backgroundColor:'#0f7c8f'}]},{scales:{y:{ticks:{callback:x=>x+' %'}}}});
+ch('c3','bar',{labels:['DIO','DSO','DPO','Ciclo operativo','CCE'],datasets:[{label:'2024',data:['dio','dso','dpo','co','cce'].map(k=>r24[k]),backgroundColor:'#8aa0b3'},{label:'2025',data:['dio','dso','dpo','co','cce'].map(k=>r25[k]),backgroundColor:'#0f7c8f'}]},{scales:{y:{title:{display:true,text:'días'}}}});
+ch('c4','doughnut',{labels:['Pasivo corriente','Pasivo no corriente','Patrimonio'],datasets:[{data:[c25.PC,c25.PNC,c25.PAT],backgroundColor:['#c9822b','#8aa0b3','#0f7c8f'],borderWidth:0}]});
+ch('c5','bar',{labels:['Liquidez corriente','Prueba ácida','Liquidez absoluta','Solvencia general','Cobertura intereses'],datasets:[{label:'2024',data:['lc','pa','la','sg','cob'].map(k=>r24[k]),backgroundColor:'#8aa0b3'},{label:'2025',data:['lc','pa','la','sg','cob'].map(k=>r25[k]),backgroundColor:'#0f7c8f'}]},{scales:{y:{title:{display:true,text:'veces'}}}})}
+function dash(){const kp=[['ROE','roe','p',1],['Margen neto','mn','p',1],['Liquidez corriente','lc','x',1],['Endeudamiento total','et','p',0],['Ciclo de efectivo','cce','d',0],['KTNO','ktno','m',0]];
+const dif=c25.TA-c25.TPP,sim=K.some(k=>S[k]!=B25[k])||PC!=25;
+$('#kp').innerHTML=kp.map(([t,k,f,hb])=>`<div class="box k"><h4>${t}</h4><div class="v">${FM[f](r25[k])}</div><div class="s">2024: ${FM[f](r24[k])}</div><small>${trend(r25[k],r24[k],hb)}</small></div>`).join('');
+$('#rd').innerHTML=`<p><b>Rentabilidad.</b> ROE de ${pc(r25.roe,2)} (${r25.roe>=r24.roe?'mejora':'cae'} frente a ${pc(r24.roe,2)}), impulsado por ${drv()}. Margen neto de ${pc(r25.mn,2)}.</p><p><b>Liquidez.</b> Liquidez corriente de ${L(r25.lc)}: ${r25.lc>=1.5?'cobertura holgada.':r25.lc>=1?'cobertura ajustada.':'no cubre el corto plazo.'} CTNO de S/ ${nf(r25.ctn)} mil frente a KTNO de S/ ${nf(r25.ktno)} mil.</p><p><b>Gestión.</b> Ciclo de conversión de ${nf(r25.cce)} días (DIO ${nf(r25.dio)}, DSO ${nf(r25.dso)}, DPO ${nf(r25.dpo)}).</p><p><b>Solvencia.</b> Endeudamiento total ${pc(r25.et)}; cobertura de intereses ${L(r25.cob)} veces${r25.cob<1.5?', riesgo de no cubrir intereses.':'.'}</p>`;
+$('#bc').innerHTML=Math.abs(dif)<1?'<span style="color:var(--ok);font-weight:600">Balance cuadrado: activos = pasivo + patrimonio.</span>':`<span class="warn">Descuadre de S/ ${nf(dif)} mil entre activos y pasivo + patrimonio.</span> <button id="cd">Cuadrar con efectivo</button>`;
+const cd=$('#cd');if(cd)cd.onclick=()=>{S.efe+=c25.TPP-c25.TA;sync();render()};
+$('#bg').textContent=sim?'Simulación activa':'Datos del archivo 2025';$('#bg').className='badge'+(sim?' on':'')}
+function buildDash(){$('#db').innerHTML=`<h2>Dashboard y simulador</h2><p class="sub">Cambia cualquier monto 2025 y mira cómo se recalculan indicadores, interpretaciones y gráficos. 2024 se mantiene como base de comparación.</p>
+<div class="grid" id="kp"></div><div class="read" id="rd"></div><p id="bc"></p>
+<div class="two" style="margin-top:12px"><div class="box"><h4>Estructura del balance (S/ mil)</h4><div class="cv"><canvas id="c1"></canvas></div></div><div class="box"><h4>Márgenes</h4><div class="cv"><canvas id="c2"></canvas></div></div><div class="box"><h4>Triángulo operativo y ciclo de efectivo</h4><div class="cv"><canvas id="c3"></canvas></div></div><div class="box"><h4>Financiamiento 2025</h4><div class="cv"><canvas id="c4"></canvas></div></div><div class="box"><h4>Liquidez y solvencia</h4><div class="cv"><canvas id="c5"></canvas></div></div><div class="box"><h4>Composición de los activos 2025</h4><div class="cv"><canvas id="c6"></canvas></div></div><div class="box"><h4>Destino de cada S/ 100 vendidos (2025)</h4><div class="cv"><canvas id="c7"></canvas></div></div></div>
+<h3>Ajustes rápidos (variación % sobre el monto original)</h3><div class="box sim" id="sl">${[['ing','Ventas'],['cv','Costo de ventas'],['inv','Inventarios'],['cxc','Cuentas por cobrar comerciales'],['cxp','Cuentas por pagar comerciales'],['fin','Deuda financiera (CP y LP)']].map(([k,t])=>`<div><label for="s_${k}">${t}: <b id="o_${k}">0 %</b></label><input type="range" id="s_${k}" data-k="${k}" min="-30" max="30" value="0"></div>`).join('')}<div><label for="pcr">Ventas a crédito (% de las ventas)</label><input type="number" id="pcr" data-pcr value="25" min="1" max="100"></div></div>
+<h3>Montos 2025 editables (S/ mil)</h3><div class="box">${[['Activos corrientes','AC'],['Activos no corrientes','ANC'],['Pasivos corrientes','PC'],['Pasivos no corrientes','PNC'],['Patrimonio','PAT']].map(([t,g])=>`<details><summary>${t}</summary><div class="sim">${BS.filter(b=>b[2]==g).map(b=>`<div><label for="i_${b[0]}">${b[1]}</label><input type="number" id="i_${b[0]}" data-k="${b[0]}" value="${S[b[0]]}"></div>`).join('')}</div></details>`).join('')}<details><summary>Estado de resultados</summary><div class="sim">${PL.map(p=>`<div><label for="i_${p[0]}">${p[1]}</label><input type="number" id="i_${p[0]}" data-k="${p[0]}" value="${S[p[0]]}"></div>`).join('')}</div></details></div>`;
+
+document.querySelectorAll('#sl input[type=range]').forEach(i=>i.oninput=()=>{const x=1+i.value/100,k=i.dataset.k;$('#o_'+k).textContent=i.value+' %';
+(k=='fin'?['ofc','ofl']:[k]).forEach(q=>S[q]=Math.round(B25[q]*x));sync();render()});
+}
+function sync(){K.forEach(k=>{const i=$('#i_'+k);if(i)i.value=S[k]})}
+function render(){c25=C(S);c24=C(B24);r25=R(c25,c24,PC/100);r24=R(c24,null,PC/100);html();dash();charts()}
+const TABS=[['nos','Nosotros'],['av','Análisis vertical y horizontal'],['dp','DuPont'],['ct','Capital de trabajo y liquidez'],['gs','Ratios de gestión'],['sv','Solvencia'],['db','Dashboard y simulador']];
+$('#nv').innerHTML=TABS.map(([i,t],n)=>`<button role="tab" data-t="${i}" aria-selected="${!n}">${t}</button>`).join('');
+function show(id){document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id==id));document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t==id));scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.t));
+$('#rs').onclick=()=>{S={...B25};PC=25;sync();$('#pcr').value=25;document.querySelectorAll('#sl input[type=range]').forEach(i=>{i.value=0;$('#o_'+i.dataset.k).textContent='0 %'});render()};
+const PAL=['#0b4ea2','#f5a300','#e63946','#2a9d8f','#8e44ad','#00b4d8','#7cb518','#ff6b35'],lt=a=>a.map(c=>c+'66');
+function cards(list){return'<div class="grid">'+list.map(([t,k,f,rule,ev,say,hb])=>{const a=r25[k],b=r24[k],e=ev?ev(a):-1,dg=['Dentro de la referencia.','Cerca del límite: conviene vigilarlo.','Fuera de la referencia: requiere atención.'][e]||'';
+return`<article class="box k"><h4>${t}</h4><div class="v">${FM[f](a)}${e>=0?`<span class="chip c${e}">${CHIP[e]}</span>`:''}</div><div class="s">2024: ${FM[f](b)}</div><p>${say(a,b,c25)} <b>${dg}</b> ${trend(a,b,hb)}</p><small>${rule}</small></article>`}).join('')+'</div>'}
+function charts(){const e=effects(),v=[r24.roe,...e,r25.roe].map(x=>x*100);
+ch('ch2','bar',{labels:['ROE 2024','Margen neto','Rotación','Apalancamiento','ROE 2025'],datasets:[{data:v,backgroundColor:v.map((x,i)=>i%4==0?'#0b4ea2':x>=0?'#2a9d8f':'#e63946')}]},{plugins:{legend:{display:false}}});
+if(!$('#c1'))return;
+const gb=(id,lb,a,b,o)=>ch(id,'bar',{labels:lb,datasets:[{label:'2024 (tono claro)',data:a,backgroundColor:lt(PAL)},{label:'2025 (tono fuerte)',data:b,backgroundColor:PAL}]},o);
+gb('c1',ML,MS.map(k=>c24[k]),MS.map(k=>c25[k]));
+gb('c2',['Margen bruto','Margen operativo','Margen neto'],['mb','mo','mn'].map(k=>r24[k]*100),['mb','mo','mn'].map(k=>r25[k]*100),{scales:{y:{ticks:{callback:x=>x+' %'}}}});
+const G=['dio','dso','dpo','co','cce'];gb('c3',['DIO','DSO','DPO','Ciclo operativo','CCE'],G.map(k=>r24[k]),G.map(k=>r25[k]),{scales:{y:{title:{display:true,text:'días'}}}});
+ch('c4','doughnut',{labels:['Pasivo corriente','Pasivo no corriente','Patrimonio'],datasets:[{data:[c25.PC,c25.PNC,c25.PAT],backgroundColor:['#f5a300','#e63946','#0b4ea2'],borderWidth:2}]});
+const Q=['lc','pa','la','sg','cob'];gb('c5',['Liquidez corriente','Prueba ácida','Liquidez absoluta','Solvencia general','Cobertura intereses'],Q.map(k=>r24[k]),Q.map(k=>r25[k]),{scales:{y:{title:{display:true,text:'veces'}}}});
+const cb=c25.cxc+c25.cxcr+c25.ocxc+c25.ocxc2+c25.cxcr2+c25.ant;ch('c6','pie',{labels:['Efectivo','Cuentas por cobrar','Inventarios','Planta y equipo','Otros'],datasets:[{data:[c25.efe,cb,c25.inv,c25.ppe,Math.max(0,c25.TA-c25.efe-cb-c25.inv-c25.ppe)],backgroundColor:PAL,borderWidth:2}]});
+const z=c25.ing||1,gO=c25.gv+c25.ga;ch('c7','pie',{labels:['Costo de ventas','Gastos de venta y administración','Impuestos','Utilidad neta','Otros'],datasets:[{data:[c25.cv,gO,c25.imp,Math.max(0,c25.UN),Math.max(0,c25.ing-c25.cv-gO-c25.imp-c25.UN)].map(x=>x/z*100),backgroundColor:['#0b4ea2','#f5a300','#e63946','#2a9d8f','#8e44ad'],borderWidth:2}]},{plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:t=>t.label+': S/ '+L(t.parsed)}}}})}
+function sync(){K.forEach(k=>document.querySelectorAll(`[data-k="${k}"]`).forEach(i=>{if(i!==document.activeElement&&i.type=='number')i.value=S[k]}));document.querySelectorAll('[data-pcr]').forEach(i=>{if(i!==document.activeElement)i.value=PC})}
+function render(){c25=C(S);c24=C(B24);r25=R(c25,c24,PC/100);r24=R(c24,null,PC/100);html();dash();charts();sync()}
+const EDK={av:K,dp:[...PL.map(p=>p[0]),'efe','cxc','inv','ppe','ofc','ofl','ra'],ct:['efe','cxc','cxcr','ocxc','inv','cxp','ofc','ocxp','pig'],gs:['ing','cv','inv','cxc','cxp','ppe','efe'],sv:['ppe','efe','inv','cxc','ofc','ofl','pid','ra','ing','cv','gv','ga','gf']};
+Object.keys(EDK).forEach(id=>{$('#'+id).innerHTML=`<details class="box ed"><summary>Simular montos 2025 en esta sección (S/ mil)</summary><p class="s">Los cambios se aplican a todas las secciones y al dashboard.</p><div class="sim">${EDK[id].map(k=>`<label>${LB[k]}<input type="number" data-k="${k}" value="${S[k]}"></label>`).join('')}${id=='gs'?'<label>Ventas a crédito (%)<input type="number" data-pcr value="25" min="1" max="100"></label>':''}</div></details><div class="out"></div>`});
+document.addEventListener('input',e=>{const t=e.target;if(t.type!='number'||!t.dataset)return;if(t.dataset.k){S[t.dataset.k]=parseFloat(t.value)||0;render()}else if('pcr' in t.dataset){PC=Math.min(100,Math.max(1,parseFloat(t.value)||25));render()}});
+buildDash();show('nos');render();
+</script></body></html>
